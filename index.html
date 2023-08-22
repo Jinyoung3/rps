@@ -1,102 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Blank HTML Document</title>
+    <title>Rock paper scissors</title>
+		<link rel="stylesheet" href="./style.css">
 </head>
 <body>
+	<p id="head">Rock paper scissors</p>
+	<p id="opening">Make a decision!</p>
+	<p id="rule">Whoever gets 5 wins first wins </p>
+	<div class="decisions">
+		<p id="player-wins" class="win-count">
+			Player: 0
+		</p>
+		<img src="qmark.png" id="player-image">
+		<p id="computer-wins" class="win-count">
+			Computer: 0
+		</p>
+		<img src="qmark.png" id="computer-image">
+	</div>
+	
+<div id="results">
+</div>
+<div id="button-container">
+	<button id="rock">
+		<img src="rock.png" id="rock-image"> 
+	</button>
+	<button id="paper">
+		<img src="paper.png" id="paper-image">
+	</button>
+	<button id="scissors">
+		<img src="scissors.png" id="scissors-image">
+	</button>
+</div>
+<script src="app.js"></script>
 
-<script>
-    function getComputerChoice(){
-        const randomNumber = Math.floor(Math.random()*3)
-        if(randomNumber===0){
-            return 'Rock'
-        } else if(randomNumber===1){
-            return 'Paper'
-        }
-        else{
-            return 'Scissors'
-        }
-
-    }
-    let win = 0
-    let lost = 0
-    function game(){
-        for (let i = 0; i < 5; i++) {
-            const playerSelection = prompt("Enter rock, paper, or scissors:");
-            console.log("You chose: " + playerSelection);
-
-            const computerSelection = getComputerChoice();
-            console.log("Computer chose: " + computerSelection);
-
-            const result = playRPS(playerSelection, computerSelection);
-            console.log(result);
-        }   
-        if(win===lost){
-            return "Ya'll tied"
-        }
-        else if(win>lost){
-            return "You won"
-        }
-        else{
-            return "You lost"
-        }
-        function playRPS(playerSelection, computerSelection){
-            if(playerSelection.toLowerCase()==='rock'){
-                if(computerSelection==='Rock'){
-                    return "It's a tie brotha"
-                }
-                else if(computerSelection==='Paper'){
-                    lost++
-                    return "It's a lost brotha paper beats rock"
-                    
-                }
-                else{
-                    win++
-                    return "It's a win brotha rock beats scissors"
-                    
-                }
-            }
-            else if(playerSelection.toLowerCase()==='scissors'){
-                if(computerSelection==='Rock'){
-                    lost++
-                    return "It's a lost brotha rock beats scissors"
-                    
-                }
-                else if(computerSelection==='Paper'){
-                    win++
-                    return "It's a win brotha scissors beats paper"
-                    
-                }
-                else{
-                    return "It's a tie brotha"
-                }
-            }
-            else if(playerSelection.toLowerCase()==='paper'){
-                if(computerSelection==='Rock'){
-                    win++
-                    return "It's a win brotha paper beats rock"
-                    
-                }
-                else if(computerSelection==='Paper'){
-                    return "It's a tie brotha"
-                }
-                else{
-                    lost++
-                    return "It's a lost brotha scissors beat paper"
-                    
-                }
-            }
-            else{
-                return "Invalid input"
-            }
-        }
-       
-    }
-    const gameResult = game();
-    console.log(gameResult);
-    
-  // Your JavaScript code goes here
-</script>
 
 </body>
 </html>
