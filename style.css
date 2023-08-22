@@ -1,0 +1,53 @@
+#head{
+	display: flex;
+	margin:0;
+	justify-content: center;
+	font-family: Fantasy;
+	font-size: 42px;
+	color:rgb(127, 129, 0);
+}
+#rock-image,#paper-image,#scissors-image{
+	display: flex;
+	width:100px;
+	height:100px;
+}
+#rule{
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+}
+#opening{
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+}
+#button-container{
+	display: flex;
+	justify-content: center;
+	
+}
+#player-image,#computer-image{
+	display: flex;
+	width:8%;
+	height:auto;
+}
+.win-count {
+  font-size: 18px; /* Adjust the font size */
+  font-weight: bold; /* Optionally make the text bold */
+	margin:0;
+};
+.custom-image-size {
+  width: 100px; /* Set the desired width */
+  height: 100px; /* Set the desired height */
+}
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center; /* Center-align text */
+}
+.decisions{
+	display: flex;
+	justify-content: center;
+}
